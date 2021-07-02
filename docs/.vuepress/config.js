@@ -1,8 +1,8 @@
 const { config } = require("vuepress-theme-hope");
 
 module.exports = config({
-  title: "Theme Demo",
-  description: "A demo for vuepress-theme-hope",
+  title: "陈俊刚的博客",
+  description: "Front end technology blog",
 
   dest: "./dist",
 
@@ -29,16 +29,16 @@ module.exports = config({
       lang: "en-US",
     },
     "/zh/": {
-      title: "Theme Demo",
-      description: "vuepress-theme-hope 的 demo",
+      title: "陈俊刚的博客",
+      description: "前端技术博客",
     },
   },
 
   themeConfig: {
-    logo: "/logo.svg",
+    logo: "/avatar.jpg",
     hostname: "https://vuepress-theme-hope-demo.mrhope.site",
 
-    author: "Mr.Hope",
+    author: "陈俊刚",
     repo: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
 
     nav: [
@@ -107,16 +107,16 @@ module.exports = config({
     blog: {
       intro: "/intro/",
       sidebarDisplay: "mobile",
-      links: {
-        Zhihu: "https://zhihu.com",
-        Baidu: "https://baidu.com",
-        Github: "https://github.com",
-      },
+      // links: {
+      //   Zhihu: "https://zhihu.com",
+      //   Github: "https://github.com/CLgang",
+      //   Csdn: "https://blog.csdn.net/csdn9_14"
+      // },
     },
 
     footer: {
       display: true,
-      content: "默认页脚",
+      // content: "默认页脚",
     },
 
     comment: {

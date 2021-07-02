@@ -2,7 +2,7 @@
 home: true
 icon: home
 title: 项目主页
-heroImage: /logo.svg
+heroImage: /avatar.jpg
 heroText: 项目名称
 tagline: 你可以在这里放置或是整个项目的描述。
 action:
@@ -67,7 +67,7 @@ features:
     link: https://vuepress-theme-hope.github.io/zh/guide/feature/
 
 copyrightText: false
-footer: MIT Licensed | Copyright © 2019-present Mr.Hope
+footer: MIT Licensed | Copyright © 2021-present 陈俊刚
 ---
 
 这是普通主页的案例。你可以在这里放置你的主体内容。
