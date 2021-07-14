@@ -1,11 +1,13 @@
 const { config } = require("vuepress-theme-hope");
+const sidebar = require('./sidebar')
 
 module.exports = config({
   title: "陈俊刚的博客",
-  description: "Front end technology blog",
+  description: "前端技术博客",
 
   dest: "./dist",
 
+  // 额外的需要被注入到当前页面的 HTML 中的标签
   head: [
     [
       "script",
@@ -24,85 +26,37 @@ module.exports = config({
     ],
   ],
 
+  // 多语言配置
   locales: {
     "/": {
-      lang: "en-US",
-    },
-    "/zh/": {
-      title: "陈俊刚的博客",
-      description: "前端技术博客",
-    },
+      lang: "zh-CN",
+    }
   },
 
+  // 主题配置
   themeConfig: {
     logo: "/avatar.jpg",
     hostname: "https://vuepress-theme-hope-demo.mrhope.site",
 
-    author: "陈俊刚",
+    author: "陈俊刚", // 文章显示的默认作者
     repo: "https://github.com/vuepress-theme-hope/vuepress-theme-hope",
 
-    nav: [
-      { text: "Blog Home", link: "/", icon: "home" },
-      { text: "Project Home", link: "/home/", icon: "home" },
+    nav: [ // icon 字段来支持图标显示。prefix 字段来自动添加分组前缀
+      { text: "博客主页", link: "/", icon: "home" },
+      { text: "项目主页", link: "/home/", icon: "home" },
       {
-        text: "Guide",
+        text: "导航",
         icon: "creative",
         link: "/guide/",
       },
       {
-        text: "Docs",
+        text: "文档",
         link: "https://vuepress-theme-hope.github.io/",
         icon: "note",
       },
     ],
 
-    sidebar: {
-      "/": [
-        "",
-        "home",
-        "slides",
-        "layout",
-        {
-          title: "Guide",
-          icon: "creative",
-          prefix: "guide/",
-          children: ["", "page", "markdown", "disable", "encrypt"],
-        },
-      ],
-    },
-
-    locales: {
-      "/zh/": {
-        nav: [
-          { text: "博客主页", link: "/zh/", icon: "home" },
-          { text: "项目主页", link: "/zh/home/", icon: "home" },
-          {
-            text: "如何使用",
-            icon: "creative",
-            link: "/zh/guide/",
-          },
-          {
-            text: "主题文档",
-            icon: "note",
-            link: "https://vuepress-theme-hope.github.io/zh/",
-          },
-        ],
-        sidebar: {
-          "/zh/": [
-            "",
-            "home",
-            "slides",
-            "layout",
-            {
-              title: "如何使用",
-              icon: "creative",
-              prefix: "guide/",
-              children: ["", "page", "markdown", "disable", "encrypt"],
-            },
-          ],
-        },
-      },
-    },
+    sidebar,
 
     blog: {
       intro: "/intro/",
